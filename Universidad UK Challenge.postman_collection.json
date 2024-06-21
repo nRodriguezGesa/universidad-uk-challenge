@@ -1,0 +1,167 @@
+{
+	"info": {
+		"_postman_id": "7a444edd-6be5-4eb0-96a0-46624b91efea",
+		"name": "Universidad UK Challenge",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25814517"
+	},
+	"item": [
+		{
+			"name": "Product All",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/{{GLOBAL_PREFIX}}/product/all?limit=10&offset=0",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"{{GLOBAL_PREFIX}}",
+						"product",
+						"all"
+					],
+					"query": [
+						{
+							"key": "limit",
+							"value": "10"
+						},
+						{
+							"key": "offset",
+							"value": "0"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Product",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/{{GLOBAL_PREFIX}}/product?limit=10&offset=0&SKU=SKU&minPrice=0&maxPrice=10000&description=Agua",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"{{GLOBAL_PREFIX}}",
+						"product"
+					],
+					"query": [
+						{
+							"key": "limit",
+							"value": "10"
+						},
+						{
+							"key": "offset",
+							"value": "0"
+						},
+						{
+							"key": "SKU",
+							"value": "SKU"
+						},
+						{
+							"key": "minPrice",
+							"value": "0"
+						},
+						{
+							"key": "maxPrice",
+							"value": "10000"
+						},
+						{
+							"key": "description",
+							"value": "Agua"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Product",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"SKU\": \"URB06W-IN\",\r\n    \"description\": \"Jugo Naranja Citric\",\r\n    \"price\": 1500\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/{{GLOBAL_PREFIX}}/product",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"{{GLOBAL_PREFIX}}",
+						"product"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Product",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"description\": \"Agua Mineral Smart Water 1L\",\r\n    \"price\": 1200\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/{{GLOBAL_PREFIX}}/product?SKU=SKU",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"{{GLOBAL_PREFIX}}",
+						"product"
+					],
+					"query": [
+						{
+							"key": "SKU",
+							"value": "SKU"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Product",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/{{GLOBAL_PREFIX}}/product?SKU=URB06W-IN",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"{{GLOBAL_PREFIX}}",
+						"product"
+					],
+					"query": [
+						{
+							"key": "SKU",
+							"value": "URB06W-IN"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
